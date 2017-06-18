@@ -2,7 +2,7 @@
 
 > Front-end test for Red Ventures
 
-![Final Result](http://henriquemelanda.com.br/test-rv)
+[Final Result](http://henriquemelanda.com.br/test-rv)
 
 > Project Requirements
 
