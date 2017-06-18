@@ -7,12 +7,15 @@ const btnAll = document.querySelector('button[data-js="all"]');
 let prodReleases = [];
 let prodBestSellers = [];
 
+
 function viewAll(){
     fetch(endpoint)
         .then(function(response){
             response.json().then(function(data){
                 prodReleases = data.releases;
                 prodBestSellers = data["best-sellers"];
+
+                
                 
                 const viewReleases = prodReleases.map(function(prod) {
                     return `
@@ -30,10 +33,10 @@ function viewAll(){
                                 ${prod.category}
                             </div>
                             <div class="showcase-price">
-                                R$ ${prod.price}
+                                R$ ${parseFloat(prod.price).toFixed(2).replace('.',',')}
                             </div>
                             <div class="showcase-portion">
-                                ou ${prod.installments.number}x de ${prod.installments.value} sem juros
+                                ou ${prod.installments.number}x de ${parseFloat(prod.installments.value).toFixed(2)} sem juros
                             </div>
                             <div class="showcase-btn">
                                 <button class="btn btn-purchase">Comprar</button>
@@ -61,10 +64,10 @@ function viewAll(){
                                 ${prod.category}
                             </div>
                             <div class="showcase-price">
-                                R$ ${prod.price}
+                                R$ ${parseFloat(prod.price).toFixed(2)}
                             </div>
                             <div class="showcase-portion">
-                                ou ${prod.installments.number}x de ${prod.installments.value} sem juros
+                                ou ${prod.installments.number}x de ${parseFloat(prod.installments.value).toFixed(2)} sem juros
                             </div>
                             <div class="showcase-btn">
                                 <button class="btn btn-purchase">Comprar</button>
