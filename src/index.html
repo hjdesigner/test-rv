@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/manifest.json">
+    <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#000000">
+    <meta name="theme-color" content="#000000">
+    <title>Nike</title>
+    <link rel="stylesheet" href="./css/rv.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-logo">
+                <a href="/">Nike</a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Masculino</a></li>
+                    <li><a href="#">Feminino</a></li>
+                    <li><a href="#">Menino</a></li>
+                    <li><a href="#">Menina</a></li>
+                </ul>
+            </nav>
+
+
+            <section class="header-cart">
+                <a href="#">Cart</a>
+            </section>
+
+            <div class="header-nav-mobile">
+                <span>menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-full">
+        <img src="./images/banner-full.jpg" alt="Banner full">
+    </section>
+
+    <section class="filters">
+        <div class="container">
+            <h3 data-js="open-filter">Chuteiras HyperVenom:</h3>
+            <div class="filters-inputs">
+                <input type="radio" id="cano-alto" name="input-filter">
+                <label for="cano-alto" data-js="label-filter">Cano Alto</label>
+                <input type="radio" id="cano-baixo" name="input-filter">
+                <label for="cano-baixo" data-js="label-filter">Cano Baixo</label>
+                <input type="radio" id="campo" name="input-filter">
+                <label for="campo" data-js="label-filter">Futebol Campo</label>
+                <input type="radio" id="society" name="input-filter">
+                <label for="society" data-js="label-filter">Futebol Society</label>
+            </div>
+            <div class="filters-all">
+                <button class="btn btn-all" data-js="all">Todos os produtos</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase best-sellers">
+        <div class="container">
+            <h2>Mais vendidos</h2>
+            <div class="showcase-carousel">
+                <input type="radio" name="input-best-sellers" id="best-sellers1" checked>
+                <input type="radio" name="input-best-sellers" id="best-sellers2">
+                <input type="radio" name="input-best-sellers" id="best-sellers3">
+                <ul>
+                    
+                </ul>
+                <div class="controls-showcase">                    
+                    <ul>
+                        <li><label for="best-sellers1">1</label></li>
+                        <li><label for="best-sellers2">2</label></li>
+                        <li><label for="best-sellers3">3</label></li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <section class="showcase releases">
+        <div class="container">
+            <h2>Lançamentos</h2>
+            <div class="showcase-carousel">
+                <input type="radio" name="input-releases" id="releases1" checked>
+                <input type="radio" name="input-releases" id="releases2">
+                <input type="radio" name="input-releases" id="releases3">
+                <ul>
+                    
+                </ul>
+                <div class="controls-showcase">                    
+                    <ul>
+                        <li><label for="releases1">1</label></li>
+                        <li><label for="releases2">2</label></li>
+                        <li><label for="releases3">3</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-full banner-footer">
+        <div class="text-banner-footer">
+            <h4>Just do It.</h4>
+            <div class="banner-footer-btn">
+                <a href="#" class="btn btn-footer">Todos os Produtos</a>
+            </div>
+        </div>
+        <img src="./images/banner-full-footer.jpg" alt="Banner full footer">
+    </section>
+
+    <footer>
+        <p>Nike Copyright 2017 - all rights reserved</p>
+    </footer>
+
+<script src="./js/rv.js"></script>    
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+//FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600,700,900');
+
+$font-default: 'Roboto', sans-serif;
+
+//COLORS
+
+$text-default: #000;
+$text-filter: #999999;
+$text-footer: $text-filter;
+$text-btn: #FFF;
+$text-customer: #666666;
+$text-category: #999999;
+$text-price: $text-customer;
+$text-portion: $text-customer;
+$text-white: #FFF;
+$bg-default: $text-default;  
+$bg-border: #cccccc;
+$bg-btn-filter: #313131;
+$bg-white: #FFF;
+$bg-btn-showcase: #ff5c2b;
+$bg-btn-banner: $bg-btn-filter;
+$bg-bullet-carousel: #d1d1d1;
+$bg-bullet-carousel-active: #a5a5a5;
+$bg-btn-hover: #ff5c2b;
+
+//Breakpoints
+//576px
+$breakpoint-mobile: 36em;
+//768px
+$breakpoint-tablet: 48em;
+//1000px
+$breakpoint-desktop: 62.5em;
+//1200px
+$breakpoint-large-desktop: 75em;
+//1440px
+$breakpoint-full-hd: 90em;

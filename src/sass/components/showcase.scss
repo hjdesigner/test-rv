@@ -1,0 +1,313 @@
+.showcase{
+    width: 100%;
+    height: auto;
+    float: left;
+        h2{
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: $text-default;
+            font-size: 1em;
+        }
+        ul{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        li{
+            width: 100%;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            padding: 46px;
+        }
+        .no-filter{
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-top: 50px;
+            font-weight: 600;
+            color: $text-default;
+            text-align: left;
+            font-size: .8em;
+        }
+        &-image{
+            width: 100%;
+            height: 149px;
+            float: left;
+            text-align: center;
+        }
+        &-customize{
+            width: 100%;
+            height: 18px;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 20px;
+            line-height: 18px;
+            color: $text-customer;
+            font-weight: 700;
+            font-size: .7em;
+            text-transform: uppercase;
+            border-bottom: 1px solid $bg-border;
+            cursor: pointer;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include sprite($icon-cutomize);
+                }
+        }
+        &-title,
+        &-category,
+        &-price,
+        &-portion,
+        &-btn{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        &-title{
+            min-height: 42px;            
+            margin-top: 14px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: .9em;
+            color: $text-default;
+            line-height: 20px;
+                a{
+                    color: $text-default;
+                    text-decoration: none;
+                }
+        }
+        &-category{
+            font-weight: 400;
+            font-size: .9em;
+            color: $text-category;
+        }
+        &-price{
+            margin-top: 6px;
+            margin-bottom: 9px;
+            font-weight: 700;
+            font-size: 1em;
+            color: $text-price;
+        }
+        &-portion{
+            font-weight: 400;
+            font-size: .9em;
+            color: $text-portion;
+        }
+        &-btn{
+            text-align: center;
+            margin-top: 18px;
+            .btn-purchase{
+                width: 183px;
+                background-color: $bg-btn-showcase;
+                box-shadow: inset 0 0 0 0 $bg-default;
+                transition: box-shadow .2s ease 0s;              
+                &:hover{
+                    box-shadow: inset 0 -46px 0 0 $bg-default;
+                }
+            }
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        .controls-showcase{
+            display: none;
+        }
+}
+@media only screen and(min-width: $breakpoint-mobile){
+    .showcase{
+        li{
+            width: 50%;
+            padding: 26px;
+        }
+    }
+}
+@media only screen and(min-width: $breakpoint-tablet){
+    .showcase{
+        &-title{
+            min-height: 60px;
+        }
+        ul{
+            width: 1968px;
+            height: 480px;
+            position: relative;
+            float: none;
+        }
+        li{
+            width: 246px;
+            padding: 32px;
+        }
+        .showcase-carousel{
+            width: 740px;
+            height: 480px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #best-sellers1,
+        #releases1{
+            &:checked ~ ul{
+                transition: transform .5s ease-in-out;
+                transform: translateX(0px);
+            }
+            &:checked ~ .controls-showcase label[for="best-sellers1"],
+            &:checked ~ .controls-showcase label[for="releases1"]{
+                background-color: $bg-bullet-carousel-active;
+            }
+        }
+        #best-sellers2,
+        #releases2{
+            &:checked ~ ul{
+                transition: transform .5s ease-in-out;
+                transform: translateX(-737px);
+            }
+            &:checked ~ .controls-showcase label[for="best-sellers2"],
+            &:checked ~ .controls-showcase label[for="releases2"]{
+                background-color: $bg-bullet-carousel-active;
+            }
+        }
+        #best-sellers3,
+        #releases3{
+            &:checked ~ ul{
+                transition: transform .5s ease-in-out;
+                transform: translateX(-1476px);
+            }
+            &:checked ~ .controls-showcase label[for="best-sellers3"],
+            &:checked ~ .controls-showcase label[for="releases3"]{
+                background-color: $bg-bullet-carousel-active;
+            }
+        }
+        .controls-showcase{
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            &.no-carousel{
+                display: none;
+            }
+                ul{
+                    width: auto;
+                    height: auto;
+                    display: inline-block;
+                    float: none;
+                }
+                li{
+                    width: 15px;
+                    height: 15px;
+                    float: left;
+                    margin-right: 8px;
+                    padding: inherit;
+                    border: 0;
+                    text-indent: -99999px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:hover{
+                        border: 0px;
+                    }
+                    label{
+                        width: 15px;
+                        height: 15px;
+                        float: left;
+                        background-color: $bg-bullet-carousel;
+                        border-radius: 50%;
+                    }
+                }
+        }
+    }
+}
+@media only screen and(min-width: $breakpoint-desktop){
+    .showcase{
+        .controls-showcase{
+            li{
+                width: 10px;
+                height: 10px;
+                label{
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        .showcase-carousel{
+            width: 1000px;
+            height: 440px;
+        }
+        #best-sellers2,
+        #releases2{
+            &:checked ~ ul{
+                transition: transform .5s ease-in-out;
+                transform: translateX(-992px);
+            }
+        }
+        #best-sellers3,
+        #releases3,
+        .controls-showcase label[for="best-sellers3"],
+        .controls-showcase label[for="releases3"],
+        {
+            display: none;
+        }
+        ul{
+            width: 2304px;
+            height: 490px;
+            position: relative;
+            float: none;
+        }
+        li{
+            width: 248px;
+            padding: 25px;
+        }        
+    }
+    .showcase{
+        &-btn{
+            transition: opacity .25s ease-out;
+            opacity: 0;
+            .btn-purchase{
+                width: 183px;
+                background-color: $bg-btn-showcase;
+            }
+        }
+        li{
+            border: 1px solid transparent;
+            &:hover{
+                transition: border .25s ease-in;
+                border: 1px solid $bg-border;
+                    .showcase-btn{
+                        transition: opacity .25s ease-in;
+                        opacity: 1;
+                    }
+            }
+        }
+    }
+}
+@media only screen and(min-width: $breakpoint-large-desktop){
+    .showcase{
+        .showcase-carousel{
+            width: 100%;
+            height: 490px;
+        }
+        #best-sellers2,
+        #releases2{
+            &:checked ~ ul{
+                transition: transform .5s ease-in-out;
+                transform: translateX(-1140px);
+            }
+        }
+        ul{
+            width: 2304px;
+            height: 490px;
+        }
+        li{
+            width: 285px;
+            padding: 46px;
+        }
+    }
+}
