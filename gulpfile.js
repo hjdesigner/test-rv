@@ -22,6 +22,7 @@ var paths = {
 };
 
 gulp.task('prod', ['copy'], function(){
+    gulp.start('build-img');
 });
 
 gulp.task('copy', ['clean'], function(){
@@ -31,8 +32,6 @@ gulp.task('copy', ['clean'], function(){
      .pipe(gulp.dest('build/' + 'css')); 
  gulp.src(paths.js, {cwd: 'src/'})
      .pipe(gulp.dest('build/' + 'js')); 
- gulp.src(paths.images, {cwd: 'src/'})
-     .pipe(gulp.dest('build/' + 'images'));
 });
 
 gulp.task('clean', function(){
