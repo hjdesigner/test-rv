@@ -30,7 +30,7 @@
 > Working with sprite
 
 - Save your icon inside the folder /images/icons/ that it will be generated automatically while the gulp server is running.
-- To place the icon in css use the code @include sprite($nombre-do-icone)
+- To place the icon in css use the code @include sprite($icon-name)
 
 > Development Environment
 
